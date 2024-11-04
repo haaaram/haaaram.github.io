@@ -7,15 +7,15 @@
     <title>김하람의 블로그</title>
     <style>
         header{
-            position: relative;
-            left: 270px;
+/*             position: relative;
+            left: 270px; */
             padding: 10px;
             margin: 25px;
             width: 1200px;
         }
         article{
-            position: relative;
-            left: 300px;
+/*             position: relative;
+            left: 300px; */
             background-color: rgb(237, 237, 237);
             width: 1180px;
             padding: 25px;
