@@ -1,10 +1,4 @@
-/*<!DOCTYPE html>*/
-<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>김하람의 블로그</title>
-    <style>
         header{
 /*             position: relative;
             left: 270px; */
