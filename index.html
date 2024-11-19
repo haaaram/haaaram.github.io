@@ -58,7 +58,7 @@
         <hr>
         <h3>방명록</h3>
         <textarea cols="70" rows="5">방명록을 남겨보세요!</textarea>
-        <input type="submit" value="전송">
+        <input type="submit" value="전송" onclick="showAlert()">
     </article>
     <aside id="introduce">
         <img src="frog.jpg" width="250px" alt="">
@@ -71,12 +71,20 @@
         <div id="cute">
             <h4>카테고리</h4>
             <ul>
-                <li>전체글(9)</li>
-                <li>공부(2)</li>
-                <li>[블챌] 주간일기 챌린지</li>
+                <li onclick="changeListItem(this)">전체글(9)</li>
+                <li onclick="changeListItem(this)">공부(2)</li>
+                <li onclick="changeListItem(this)">[블챌] 주간일기 챌린지</li>
             </ul>
         </div>
     </aside>
     <div id="id">202001652 김하람</div>
+    <script>
+        function changeListItem(item){
+            item.style.color ='purple';
+        }
+        function showAlert(){
+            alert("방명록을 남길 수 있는 권한이 없습니다.");
+        }
+    </script>
 </body>
 </html>
