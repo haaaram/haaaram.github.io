@@ -6,62 +6,113 @@
     <title>김하람의 블로그</title>
     <style>
         header{
-            /*position: relative;
-            left: 270px;*/
+            position: relative;
+            left: 270px;
             padding: 10px;
             margin: 25px;
             width: 1200px;
+            text-align: center;
         }
-        article{
-            /*position: relative;
-            left: 300px;*/
+        nav{
+            width: 16%;
+            height: 70%;
+            float: left;
+        }
+        section{
             background-color: rgb(237, 237, 237);
-            width: 1100px;
+            width: 55%;
+            height: 70%;
+            float: left;
             padding: 25px;
         }
-        #introduce{
+        aside{
             background-color: rgb(214, 253, 217);
-            position: absolute;
-            top: 168px;
-            right: 50px;
+            width: 15%;
+            height: 70%;
+            float: left;
             padding: 20px;
+            margin-left: 11px;
         }
         #cute{
             background-color: rgb(242, 255, 240);
-            padding:10px;
+            padding: 10px;
         }
         #id{
             position:absolute;
-            right:10px;
+            right: 10px;
             top: 10px;
+        }
+        #vote{
+            background-color: white;
+            padding: 10px;
         }
     </style>
 </head>
 <body>
-    <header><h1>개구리는 개굴개굴</h1></header>
+    <header><h1><a name="home">청개구리 하람의 일상</a></h1></header>
     <hr>
+    <nav style="color: white;">nav</nav>
+    <section>
     <article>
-        게시판
-        <h2>툼바 신라면 솔직 후기!</h2>
-        <p style="color: rgb(131, 130, 130);">2024.11.04. 13:04 | 이웃공개</p>
+        <a name="board">게시판</a><hr>
+        <h2>✨대학생활 꿀팁: 이렇게 메일 쓰고 교수님께 칭찬 받았어요!✨</h2>
+        <p style="color: rgb(131, 130, 130);">2024.12.15. 13:04 | 이웃공개</p>
         <hr>
         <p style="font-size:20px">
             안녕하세요 여러분!<br><br>
-            오늘은 새로 나온 툼바 신라면을 먹어볼게요~ <br><br>
-            <img src="shin.jpg" alt="">
+            오늘은 교수님께 메일 쓰는 법을 알려드릴게요~<br><br>
+
+            <img src="image/moon_031.png" alt="문"><br>
+
+            <h3>제목엔 항상 학번 이름이 들어가게!</h3>
+
+            항상 제목만 봐도 상대방이 내용을 파악할 수 있게 하는 것이 중요합니다!<br><br>
+
+            [00과 00학번 김00] ~관련 문의...
         </p>
         <p style="color: rgb(131, 130, 130); text-decoration-line: underline;">
             더보기
         </p>
     </article>
+    <hr>
+    <article>
+        <h2>2025년 달력 수요 조사</h2>
+        <p style="color: rgb(131, 130, 130);">2024.12.01. 17:34 | 전체공개</p>
+        <hr>
+        <img src="image/calendar.jpg" width="400px" height="300px" alt="달력">
+        <p style="font-size:20px">
+            안녕하세요, 블친님들!<br><br>
+            오늘은 2025년 달력 수요 조사를 진행하겠습니다~<br><br>
+            아래 투표 한번씩 해주시면 감사하겠습니다^^
+        </p>
+        <div id="vote">
+            • 귀하의 성별을 알려주세요.<br>
+            <input type="radio" name="gender" value="남성">남성
+            <input type="radio" name="gender" value="여성">여성<br><br>
+            
+            • 나이는 어떻게 되시죠?<br>
+            <input type="radio" name="age" value="10대">10대
+            <input type="radio" name="age" value="20대">20대
+            <input type="radio" name="age" value="30대">30대
+            <input type="radio" name="age" value="40대">40대<br><br>
+
+            • 달력 구매 의사를 알려주세요.<br>
+            <input type="radio" name="ask" value="산다">무조건 산다!<br>
+            <input type="radio" name="ask" value="고민">고민 중..<br>
+            <input type="radio" name="ask" value="female">안 산다ㅠ<br><br>
+
+            <input type="button" value="제출" onClick="getSelect()">
+        </div>
+    </article>
     <article>
         <hr>
-        <h3>방명록</h3>
+        <a name="guest"><h3>방명록</h3></a>
         <textarea cols="70" rows="5">방명록을 남겨보세요!</textarea>
         <input type="submit" value="전송" onclick="showAlert()">
     </article>
-    <aside id="introduce">
-        <img src="frog.jpg" width="250px" alt="">
+    </section>
+    <aside>
+        <img src="image/frog.jpg" width="280px" alt="">
         <h3>하람🍀</h3>
         <div id="cute">
             제 블로그에 오신 것을 <br>환영합니다:>
@@ -70,20 +121,23 @@
         <br>
         <div id="cute">
             <h4>카테고리</h4>
-            <ul>
-                <li onclick="changeListItem(this)">전체글(9)</li>
-                <li onclick="changeListItem(this)">공부(2)</li>
-                <li onclick="changeListItem(this)">[블챌] 주간일기 챌린지</li>
-            </ul>
+            <a href="#home">🗒️홈</a><br>
+            <a href="#board">🗒️게시판</a><br>
+            <a href="#guest">🗒️방명록</a><br>
         </div>
     </aside>
+
     <div id="id">202001652 김하람</div>
     <script>
-        function changeListItem(item){
-            item.style.color ='purple';
-        }
         function showAlert(){
             alert("방명록을 남길 수 있는 권한이 없습니다.");
+        }
+        function getSelect() {
+            const Gender = document.querySelector('input[name="gender"]:checked')?.value || "선택 안 함";
+            const Age = document.querySelector('input[name="age"]:checked')?.value || "선택 안 함";
+            const Ask = document.querySelector('input[name="ask"]:checked')?.value || "선택 안 함";
+
+            alert(`${Gender} | ${Age} | ${Ask}를 선택하셨습니다!`);
         }
     </script>
 </body>
